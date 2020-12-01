@@ -86,16 +86,16 @@ main {
 .about__collection-link:active,
 .header__contacts-link:focus,
 .header__contacts-link:active,
+.header__contacts-phone:focus,
+.header__contacts-phone:active,
+.header__menu:focus,
+.header__menu:active,
 .consult__link:focus,
 .consult__link:active,
-.best__order-link:focus,
-.best__order-link:active,
+.best__products-link:focus,
+.best__products-link:active,
 .slider__link:focus,
 .slider__link:active,
-.about__collection-link:focus,
-.about__collection-link:active,
-.about__aside-link:focus,
-.about__aside-link:active,
 .modal__btn:focus,
 .modal__btn:active,
 .request__submit-btn:focus {
@@ -114,6 +114,10 @@ main {
 	width: 141px;
 	height: 52px;
 	align-self: center;
+}
+
+.header__logo-text {
+	padding-top: 6px;
 }
 
 .header__contacts:nth-child(1),
@@ -160,18 +164,24 @@ main {
 	top: 2px;
 }
 
-.header__menu-img {
+.header__menu {
+	background: url(../img/menu.svg);
 	width: 36px;
 	height: 32px;
+	border: none;
+	background-color: inherit;
 	position: relative;
+}
+
+.header__menu:hover {
+	transform: scale(1.1);
 }
 
 .header__menu-nav {
 	display: none;
 }
 
-.header__menu:hover .header__menu-nav,
-.header__menu:active .header__menu-nav {
+.header__menu-nav--open {
 	display: inline-block;
 	position: absolute;
 	right: 120px;
@@ -259,7 +269,7 @@ main {
 }
 
 .consult__link,
-.best__order-link,
+.best__products-link,
 .slider__link {
 	font-size: 12px;
 	line-height: 16px;
@@ -341,14 +351,14 @@ main {
 
 .about__collection-link,
 .about__aside-link,
-.best__order-link {
+.best__products-link {
 	font-weight: bold;
 	color: #9A8584;
 }
 
 .about__collection-link:hover,
 .about__aside-link:hover,
-.best__order-link:hover {
+.best__products-link:hover {
 	color: #e5e5e5;
 	background-color: #343235;
 	transition: color 1.5s ease-out,
@@ -447,7 +457,7 @@ main {
 	height: 264px;
 }
 
-.best__products-item::after {
+.best__products-link::after {
 	content: "";
 	background: url(../img/line-order.svg) no-repeat;
 	width: 80px;
@@ -794,14 +804,21 @@ main {
 	color: #343235;
 }
 
+.footer {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 32px;
+	color: #EEE9E6;
+}
 .footer__wrapper {
 	background: url(../img/footer-bg.png);
 	width: 1366px;
-	height: 734px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	column-gap: 20px;
 	justify-items: center;
+	padding-bottom: 50px;
 }
 
 .footer__request {
@@ -839,19 +856,99 @@ main {
 }
 
 .request__text {
-	color: #EEE9E6;
 	padding-bottom: 30px;
 }
 
 .request__form {}
-.request__form-field {}
-.request__name { }
-.request__tel { }
-.request__form-time { }
-.request__time { }
-.request__agree { }
-.request__submit { }
+.request__form-field {
+	position: relative;
+}
 
+.request__form-field::after {
+	content: "";
+	background: url(../img/line-diagonal.svg) no-repeat;
+	position: absolute;
+	width: 20px;
+	height: 10px;
+	right: -20px;
+	top: 53px;
+}
+
+.request__name,
+.request__tel {
+	width: 474px;
+	background: inherit;
+	border: none;
+	border-bottom: 2px solid #A78587;
+	font-family: "Montserrat", sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	color: #F6EDE9;
+	padding: 20px 0;
+	margin-bottom: 20px;
+}
+
+
+.request__name:focus,
+.request__name:active,
+.request__tel:hover,
+.request__tel:focus,
+.request__tel:active,
+.request__form-agree:active,
+.request__form-agree:focus {
+	opacity: 0.8;
+}
+
+.request__form-time {
+	width: 178px;
+	padding: 10px;
+	margin-top: 20px;
+	border: 1px solid #A78587;
+	position: relative;
+}
+
+.request__form-time::after{
+	content: "";
+	background: url(../img/input-time.svg) no-repeat;
+	position: absolute;
+	width: 15px;
+	height: 10px;
+	top: 20px;
+	left: 160px;
+}
+
+.request__form-select {
+	background: inherit;
+	color: white;
+}
+
+.request__form-personal {
+	padding-top: 30px;
+}
+
+.request__form-agree {
+	position: absolute;
+	appearance: none;
+}
+
+.request__form-agree[type="checkbox"]{
+	width: 27px;
+	height: 27px;
+	border: 1px solid #A78587;
+	position: absolute;
+}
+
+.request__form-agree[type="checkbox"]:checked {
+	background: url(../img/input-check.png) no-repeat;
+	width: 28px;
+	height: 28px;
+	position: absolute;
+	border: none;
+}
+
+.request__form-text {
+	padding-left: 40px;
+}
 
 .request__submit-btn {
 	font-family: "Montserrat", sans-serif;
@@ -859,7 +956,7 @@ main {
 	line-height: 20px;
 	text-transform: uppercase;
 	color: #A78587;
-	background-color: #343235;
+	background: inherit;
 	display: inline-block;
 	width: 474px;
 	border: 0;

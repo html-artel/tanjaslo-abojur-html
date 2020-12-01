@@ -39,9 +39,9 @@
             height="52"
             alt=""
           />
-          <p class="header__logo-text">
+          <span class="header__logo-text">
             Студия дизайнерского текстиля в Санкт Петербурге
-          </p>
+          </span>
         </div>
         <div class="header__contacts">
           <a class="header__contacts-phone" href="tel:+78918574624">
@@ -56,26 +56,22 @@
             реки Карповки, дом 5, литер П
           </p>
         </div>
-        <div class="header__menu">
-          <img
-            class="header__menu-img"
-            src="/img/menu.svg"
-            width="36"
-            height="32"
-            alt="значок меню"
-          />
-          <!-- при нажатии на "бургер" будет открываться меню -->
-          <nav class="header__menu-nav">
-            <ul class="header__menu-list">
-              <li class="header__menu-item">
-                <a class="header__menu-link" href="#Подушки">Подушки</a>
-              </li>
-              <li class="header__menu-item">
-                <a class="header__menu-link" href="#Покрывала">Покрывала</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <button
+          class="header__menu"
+          type="button"
+          aria-label="открыть меню"
+        ></button>
+        <!-- при нажатии на "бургер" будет открываться меню -->
+        <nav class="header__menu-nav">
+          <ul class="header__menu-list">
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#Подушки">Подушки</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#Покрывала">Покрывала</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
     <main class="main">
@@ -179,7 +175,7 @@
               <p class="best__products-small-text">
                 *стоимость варьируется в зависимости от размера изделия
               </p>
-              <a class="best__order-link" href="#">заказать</a>
+              <a class="best__products-link" href="#">заказать</a>
             </div>
             <div class="best__products-item">
               <img
@@ -194,7 +190,7 @@
               <p class="best__products-small-text">
                 *стоимость варьируется в зависимости от размера изделия
               </p>
-              <a class="best__order-link" href="#">заказать</a>
+              <a class="best__products-link" href="#">заказать</a>
             </div>
             <div class="best__products-item">
               <img
@@ -209,7 +205,7 @@
               <p class="best__products-small-text">
                 *стоимость варьируется в зависимости от размера изделия
               </p>
-              <a class="best__order-link" href="#">заказать</a>
+              <a class="best__products-link" href="#">заказать</a>
             </div>
             <div class="best__products-item">
               <img
@@ -224,7 +220,7 @@
               <p class="best__products-small-text">
                 *стоимость варьируется в зависимости от размера изделия
               </p>
-              <a class="best__order-link" href="#">заказать</a>
+              <a class="best__products-link" href="#">заказать</a>
             </div>
             <div class="best__products-item">
               <img
@@ -239,7 +235,7 @@
               <p class="best__products-small-text">
                 *стоимость варьируется в зависимости от размера изделия
               </p>
-              <a class="best__order-link" href="#">заказать</a>
+              <a class="best__products-link" href="#">заказать</a>
             </div>
           </div>
         </div>
@@ -497,7 +493,7 @@
           <form class="request__form">
             <div class="request__form-field">
               <input
-                class="request__name input"
+                class="request__name"
                 type="text"
                 name="fullname"
                 id="fullname"
@@ -507,7 +503,7 @@
             </div>
             <div class="request__form-field">
               <input
-                class="request__tel input"
+                class="request__tel"
                 type="tel"
                 name="phone"
                 id="phone"
@@ -516,31 +512,29 @@
               />
             </div>
             <div class="request__form-time">
-              <input
-                class="request__time input"
-                type="text"
-                name="time"
-                id="time"
-                value="Удобное время"
-              />
-              <select class="visually-hidden" name="time">
+              <select class="request__form-select" name="time">
+                <option>Удобное время</option>
                 <option value="am">до обеда</option>
                 <option value="pm">после обеда</option>
               </select>
             </div>
-            <input
-              class="request__agree input"
-              type="checkbox"
-              name="agree"
-              id="agree"
-              checked
-            />
-            <label for="agree">Согласие на обработку персональных данных</label>
-            <div class="request__submit">
-              <button class="request__submit-btn" type="submit">
-                Оставить заявку
-              </button>
+            <div class="request__form-personal">
+              <label for="agree">
+                <input
+                  class="request__form-agree"
+                  type="checkbox"
+                  name="agree"
+                  id="agree"
+                  checked
+                />
+                <span class="request__form-text"
+                  >Согласие на обработку персональных данных</span
+                ></label
+              >
             </div>
+            <button class="request__submit-btn" type="submit">
+              Оставить заявку
+            </button>
           </form>
         </div>
         <div class="footer__map">
