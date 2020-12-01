@@ -133,6 +133,7 @@ main {
 .header__menu {
 	grid-column: 5 / 6;
 	align-self: center;
+	cursor: pointer;
 }
 
 .header__contacts-phone {
@@ -148,6 +149,11 @@ main {
 	position: absolute;
 	left: -25px;
 	top: -3px;
+}
+
+.header__contacts-phone:hover {
+	text-decoration: underline;
+	color: #A78587;
 }
 
 .header__contacts-address {
@@ -856,6 +862,7 @@ main {
 }
 
 .request__text {
+	color: #EEE9E6;
 	padding-bottom: 30px;
 }
 
@@ -871,7 +878,7 @@ main {
 	width: 20px;
 	height: 10px;
 	right: -20px;
-	top: 53px;
+	top: 44px;
 }
 
 .request__name,
@@ -881,14 +888,15 @@ main {
 	border: none;
 	border-bottom: 2px solid #A78587;
 	font-family: "Montserrat", sans-serif;
-	font-size: 14px;
+	font-weight: 500;
+	font-size: 16px;
 	line-height: 18px;
 	color: #F6EDE9;
-	padding: 20px 0;
+	padding: 15px 0;
 	margin-bottom: 20px;
 }
 
-
+.request__name:hover,
 .request__name:focus,
 .request__name:active,
 .request__tel:hover,
@@ -901,25 +909,39 @@ main {
 
 .request__form-time {
 	width: 178px;
-	padding: 10px;
+	padding: 10px 20px;
 	margin-top: 20px;
 	border: 1px solid #A78587;
 	position: relative;
 }
 
-.request__form-time::after{
-	content: "";
+.request__form-select {
+	display: block;
+	appearance: none;
+	background: inherit;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 18px;
+	color: white;
+	border: none;
+	padding: 4px;
+	box-sizing: border-box;
+
 	background: url(../img/input-time.svg) no-repeat;
 	position: absolute;
 	width: 15px;
 	height: 10px;
-	top: 20px;
-	left: 160px;
+	top: 24px;
+	left: 180px;
 }
 
-.request__form-select {
-	background: inherit;
-	color: white;
+.request__form-select option {
+	background: #343235;
+}
+
+.request__form-select option {
+	background: #343235;
 }
 
 .request__form-personal {
@@ -933,8 +955,8 @@ main {
 
 .request__form-agree[type="checkbox"]{
 	width: 27px;
-	height: 27px;
-	border: 1px solid #A78587;
+	height: 28px;
+	border: 1px solid #9A8584;
 	position: absolute;
 }
 
