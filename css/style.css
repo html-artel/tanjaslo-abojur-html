@@ -1,21 +1,21 @@
 @font-face {
-    font-family: "Montserrat-Medium";
-    src: local("Montserrat-Medium"),
-    src: url("/fonts/Montserrat-Medium.woff2") format("woff2"),
-      url("/fonts/Montserrat-Medium.woff") format("woff");
+	font-family: "Montserrat-Medium";
+	src: local("Montserrat-Medium"),
+		url("/fonts/Montserrat-Medium.woff2") format("woff2"),
+		url("/fonts/Montserrat-Medium.woff") format("woff");
 
-    font-family: "Montserrat-Bold";
-    src: local("Montserrat-Bold"),
-    src: url("/fonts/Montserrat-Bold.woff2") format("woff2"),
-      url("/fonts/Montserrat-Bold.woff") format("woff");
+	font-family: "Montserrat-Bold";
+	src: local("Montserrat-Bold"),
+		url("/fonts/Montserrat-Bold.woff2") format("woff2"),
+		url("/fonts/Montserrat-Bold.woff") format("woff");
 
-    font-family: "OldStandardTT-Regular";
-    src: url("/fonts/OldStandardTT-Regular.woff2") format("woff2"),
-        url("/fonts/OldStandardTT-Regular.woff") format("woff");
+	font-family: "OldStandardTT-Regular";
+	src: url("/fonts/OldStandardTT-Regular.woff2") format("woff2"),
+		url("/fonts/OldStandardTT-Regular.woff") format("woff");
 
-    font-weight: normal;
-    font-style: normal;
-     }
+	font-weight: normal;
+	font-style: normal;
+}
 
 body {
 	width: 100%;
@@ -257,9 +257,9 @@ main {
 .team__headline::before,
 .collections__headline::before,
 .footer__headline::before {
-    content: "";
+	content: "";
 	position: absolute;
-    z-index: -1;
+	z-index: -1;
 }
 
 .consult__wrapper {
@@ -569,8 +569,8 @@ main {
 
 .slider__btn-prev:hover,
 .slider__btn-next:hover {
-	 transition: transform 0.1s linear;
-	 transform: scale(0.9);
+	transition: transform 0.1s linear;
+	transform: scale(0.9);
 }
 
 .slider__btn-prev:focus,
@@ -655,7 +655,7 @@ main {
 	width: 573px;
 	height: 598px;
 	margin-top: 20px;
-    position: relative;
+	position: relative;
 	z-index: 3;
 }
 
@@ -666,9 +666,9 @@ main {
 	width: 100px;
 	height: 100px;
 	position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 0%;
+	left: 0%;
+	right: 0%;
+	top: 0%;
 	bottom: 0%;
 	margin: auto;
 }
@@ -1104,6 +1104,6 @@ main {
 
 .modal__btn:hover {
 	background-color: #e5e5e5;
-  	color: #343235;
-  	cursor: pointer;
+	color: #343235;
+	cursor: pointer;
 }
