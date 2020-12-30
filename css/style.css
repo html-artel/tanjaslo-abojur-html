@@ -800,7 +800,8 @@ main {
 }
 
 .footer__wrapper {
-	background: url(../img/footer-bg.png) no-repeat;
+  background: url(../img/footer-bg.png) no-repeat;
+  width: 1366px;
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	column-gap: 20px;
